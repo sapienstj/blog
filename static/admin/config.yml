@@ -5,53 +5,13 @@ publish_mode: editorial_workflow
 media_folder: static/images/
 public_folder: /images/
 collections:
-  - name: Posts
-    label: Posts
-    folder: content/posts
+  - label: "Posts"
+    name: "posts"
+    folder: "content/post"
     create: true
-    slug: "{{slug}}"
     fields:
-      - label: Título
-        name: title
-        required: true
-        widget: string
-        hint: ""
-        default: ""
-      - label: Body
-        name: body
-        required: true
-        widget: markdown
-        hint: ""
-        default: ""
-    identifier_field: Posts
-  - name: Categorias
-    label: Categorias
-    folder: content/categories
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - label: Título
-        name: title
-        required: true
-        widget: string
-        hint: ""
-        default: ""
-      - label: Descrição
-        name: description
-        required: true
-        widget: string
-        hint: ""
-        default: ""     
-      - label: Imagem
-        name: description
-        required: true
-        widget: string
-        hint: ""
-        default: ""            
-      - label: Body
-        name: body
-        required: true
-        widget: markdown
-        hint: ""
-        default: ""
-    identifier_field: Posts
+      - {label: "Autor", name: "tag", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Descrição", name: "description", widget: "string"}
+      - {label: "Imagem", name: "image", widget: "image"}      
+      - {label: "Conteúdo", name: "body", widget: "markdown"}
