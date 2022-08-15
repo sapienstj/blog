@@ -10,9 +10,10 @@ collections:
     folder: "content/post"
     create: true
     fields:
-      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Data", name: "date", widget: "date"}    
+      - {label: "Título", name: "title", widget: "string"}
       - {label: "Descrição", name: "description", widget: "string"}
-      - {label: "Imagem", name: "image", widget: "image"}
-      - {label: "Categoria", name: "categories", widget: "select", multiple: false, options: ["Postagem", "Podcast", "Tutorial"], allow_add: false,  default: ["Postagem"]}              
+      - {label: "Categoria", name: "tags", widget: "select", options: ["Postagem", "Podcast", "Tutorial"]}
+      - {label: "Imagem", name: "image", widget: "image"}         
       - {label: "Conteúdo", name: "body", widget: "markdown"}
-      - { label: "Autor", name: "tags", widget: "string", default: ["Equipe Sapiens"]}
+      
