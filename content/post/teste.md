@@ -1,4 +1,5 @@
 ---
+date: 2022-08-15T23:15:32.021Z
 title: Teste
 description: Postagem de teste
 categories: Postagem
