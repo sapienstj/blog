@@ -11,8 +11,8 @@ collections:
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Autor", name: "tags", widget: "select", multiple: false, options: ["Equipe Sapiens", "Matheus Gonçalves", "Matheus Oliveira"], allow_add: true,  default: ["Equipe Sapiens"]}
       - {label: "Descrição", name: "description", widget: "string"}
       - {label: "Imagem", name: "image", widget: "image"}
       - {label: "Categoria", name: "categories", widget: "select", multiple: false, options: ["Postagem", "Podcast", "Tutorial"], allow_add: false,  default: ["Postagem"]}              
       - {label: "Conteúdo", name: "body", widget: "markdown"}
+      - { label: "Autor", name: "tags", widget: "list", summary: "{{fields.tag}}", field: { label: "Tag", name: "tag", widget: "string" }}
