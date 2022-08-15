@@ -14,6 +14,6 @@ collections:
       - {label: "URL", name: "slug", widget: "string"}
       - {label: "Descrição", name: "description", widget: "string"}
       - {label: "Imagem", name: "image", widget: "image"}
-      - {label: "Tags", name: "tags", multiple: true, options: ["Design", "UX", "Dev"], allow_add: false}
-      - {label: "Categorias", name: "cateogories", multiple: true, options: ["Design", "UX", "Dev"]}               
+      - {label: "Tags", name: "tags", widget: "select", multiple: true, options: ["Design", "UX", "Dev"], allow_add: false}
+      - {label: "Categorias", name: "categories", multiple: true, options: ["Design", "UX", "Dev"]}               
       - {label: "Conteúdo", name: "body", widget: "markdown"}
