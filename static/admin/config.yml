@@ -24,3 +24,34 @@ collections:
         hint: ""
         default: ""
     identifier_field: Posts
+  - name: Categorias
+    label: Categorias
+    folder: content/categories
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: Título
+        name: title
+        required: true
+        widget: string
+        hint: ""
+        default: ""
+      - label: Descrição
+        name: description
+        required: true
+        widget: string
+        hint: ""
+        default: ""     
+      - label: Imagem
+        name: description
+        required: true
+        widget: string
+        hint: ""
+        default: ""            
+      - label: Body
+        name: body
+        required: true
+        widget: markdown
+        hint: ""
+        default: ""
+    identifier_field: Posts
