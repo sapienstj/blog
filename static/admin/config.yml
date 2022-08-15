@@ -10,8 +10,10 @@ collections:
     folder: "content/post/{{slug}}"
     create: true
     fields:
-      - {label: "Autor", name: "tag", widget: "string"}
       - {label: "Title", name: "title", widget: "string"}
+      - {label: "URL", name: "slug", widget: "string"}
       - {label: "Descrição", name: "description", widget: "string"}
-      - {label: "Imagem", name: "image", widget: "image"}      
+      - {label: "Imagem", name: "image", widget: "image"}
+      - {label: "Tags", name: "tags", multiple: true, options: ["Design", "UX", "Dev"]}
+      - {label: "Categorias", name: "cateogories", multiple: true, options: ["Design", "UX", "Dev"]}               
       - {label: "Conteúdo", name: "body", widget: "markdown"}
