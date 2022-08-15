@@ -6,8 +6,8 @@ media_folder: static/images/
 public_folder: /images/
 collections:
   - label: "Posts"
-    name: "posts"
-    folder: "content/post"
+    name: "post"
+    folder: "content/post/{{slug}}"
     create: true
     fields:
       - {label: "Autor", name: "tag", widget: "string"}
