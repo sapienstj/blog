@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Podcast on Agência Sapiens</title><link>https://example.com/categories/podcast/</link><description>Recent content in Podcast on Agência Sapiens</description><generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Wed, 02 Apr 2014 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/categories/podcast/index.xml" rel="self" type="application/rss+xml"/><item><title>Introduction aux modèles (Hu)go</title><link>https://example.com/posts/introduction-aux-modeles-hugo/</link><pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate><guid>https://example.com/posts/introduction-aux-modeles-hugo/</guid><description>&lt;p>Hugo utilise l&amp;rsquo;excellente librairie &lt;a class="link" href="http://golang.org/" target="_blank" rel="noopener"
+>go&lt;/a> &lt;a class="link" href="http://golang.org/pkg/html/template/" target="_blank" rel="noopener"
+>html/template&lt;/a> pour
+son moteur de modèles. c&amp;rsquo;est un moteur extrêmement léger qui offre un très petit
+nombre de fonctions logiques. À notre expérience, c&amp;rsquo;est juste ce qu&amp;rsquo;il faut pour
+créer un bon site web statique. Si vous avez déjà utilisé d&amp;rsquo;autre moteurs de
+modèles pour différents langages ou frameworks, vous allez retrouver beaucoup de
+similitudes avec les modèles go.&lt;/p>
+&lt;p>Ce document est une introduction sur l&amp;rsquo;utilisation de Go templates. La
+&lt;a class="link" href="http://golang.org/pkg/html/template/" target="_blank" rel="noopener"
+>documentation go&lt;/a> fourni plus de détails.&lt;/p>
+&lt;h2 id="introduction-aux-modèles-go">Introduction aux modèles Go&lt;/h2>
+&lt;p>Go templates fournit un langage de modèles très simple. Il adhère à la
+conviction que les modèles ou les vues doivent avoir une logique des plus
+élémentaires. L&amp;rsquo;une des conséquences de cette simplicité est que les modèles
+seront plus rapides a être analysés.&lt;/p>
+&lt;p>Une caractéristique unique de Go templates est qu&amp;rsquo;il est conscient du contenu.
+Les variables et le contenu va être nettoyé suivant le contexte d&amp;rsquo;utilisation.
+Plus de détails sont disponibles dans la &lt;a class="link" href="http://golang.org/pkg/html/template/" target="_blank" rel="noopener"
+>documentation go&lt;/a>.&lt;/p>
+&lt;h2 id="syntaxe-basique">Syntaxe basique&lt;/h2>
+&lt;p>Les modèles en langage Go sont des fichiers HTML avec l&amp;rsquo;ajout de variables et
+fonctions.&lt;/p>
+&lt;p>&lt;strong>Les variables Go et les fonctions sont accessibles avec {{ }}&lt;/strong>&lt;/p>
+&lt;p>Accès à une variable prédéfinie &amp;ldquo;foo&amp;rdquo;:&lt;/p>
+&lt;pre>&lt;code>{{ foo }}
+&lt;/code>&lt;/pre>
+&lt;p>&lt;strong>Les paramètres sont séparés par des espaces&lt;/strong>&lt;/p>
+&lt;p>Appel de la fonction add avec 1 et 2 en argument**&lt;/p>
+&lt;pre>&lt;code>{{ add 1 2 }}
+&lt;/code>&lt;/pre>
+&lt;p>&lt;strong>Les méthodes et les champs sont accessibles par un point&lt;/strong>&lt;/p>
+&lt;p>Accès au paramètre de la page &amp;ldquo;bar&amp;rdquo;&lt;/p>
+&lt;pre>&lt;code>{{ .Params.bar }}
+&lt;/code>&lt;/pre>
+&lt;p>&lt;strong>Les parenthèses peuvent être utilisées pour grouper des éléments ensemble&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">{{ if or (isset .Params &amp;#34;alt&amp;#34;) (isset .Params &amp;#34;caption&amp;#34;) }} Caption {{ end }}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="variables">Variables&lt;/h2>
+&lt;p>Chaque modèle go a une structure (objet) mis à sa disposition. Avec Hugo, à
+chaque modèle est passé soit une page, soit une structure de nœud, suivant quel
+type de page vous rendez. Plus de détails sont disponibles sur la page des
+&lt;a class="link" href="https://example.com/layout/variables" >variables&lt;/a>.&lt;/p>
+&lt;p>Une variable est accessible par son nom.&lt;/p>
+&lt;pre>&lt;code>&amp;lt;title&amp;gt;{{ .Title }}&amp;lt;/title&amp;gt;
+&lt;/code>&lt;/pre>
+&lt;p>Les variables peuvent également être définies et appelées.&lt;/p>
+&lt;pre>&lt;code>{{ $address := &amp;quot;123 Main St.&amp;quot;}}
+{{ $address }}
+&lt;/code>&lt;/pre>
+&lt;h2 id="functions">Functions&lt;/h2>
+&lt;p>Go templace est livré avec quelques fonctions qui fournissent des
+fonctionnalités basiques. Le système de Go template fourni également un
+mécanisme permettant aux applications d&amp;rsquo;étendre les fonctions disponible. Les
+&lt;a class="link" href="https://example.com/layout/functions" >fonctions de modèle Hugo&lt;/a> fourni quelques fonctionnalités
+supplémentaires que nous espérons qu&amp;rsquo;elles seront utiles pour vos sites web.
+Les functions sont appelées en utilisant leur nom suivi par les paramètres
+requis séparés par des espaces. Des fonctions de modèles ne peuvent pas être
+ajoutées sans recompiler Hugo.&lt;/p>
+&lt;p>&lt;strong>Exemple:&lt;/strong>&lt;/p>
+&lt;pre>&lt;code>{{ add 1 2 }}
+&lt;/code>&lt;/pre>
+&lt;h2 id="inclusions">Inclusions&lt;/h2>
+&lt;p>Lorsque vous incluez un autre modèle, vous devez y passer les données qu&amp;rsquo;il sera
+en mesure d&amp;rsquo;accèder. Pour passer le contexte actuel, pensez à ajouter un point.
+La localisation du modèle sera toujours à partir du répertoire /layout/ dans
+Hugo.&lt;/p>
+&lt;p>&lt;strong>Exemple:&lt;/strong>&lt;/p>
+&lt;pre>&lt;code>{{ template &amp;quot;chrome/header.html&amp;quot; . }}
+&lt;/code>&lt;/pre>
+&lt;h2 id="logique">Logique&lt;/h2>
+&lt;p>Go templates fourni les itérations et la logique conditionnèle des plus basique.&lt;/p>
+&lt;h3 id="itération">Itération&lt;/h3>
+&lt;p>Comme en go, les modèles go utilisent fortement &lt;em>range&lt;/em> pour itérer dans une
+map, un array ou un slice. Les exemples suivant montre différentes façons
+d&amp;rsquo;utiliser &lt;em>range&lt;/em>&lt;/p>
+&lt;p>&lt;strong>Exemple 1: En utilisant le context&lt;/strong>&lt;/p>
+&lt;pre>&lt;code>{{ range array }}
+{{ . }}
+{{ end }}
+&lt;/code>&lt;/pre>
+&lt;p>&lt;strong>Exemple 2: En déclarant un nom de variable&lt;/strong>&lt;/p>
+&lt;pre>&lt;code>{{range $element := array}}
+{{ $element }}
+{{ end }}
+&lt;/code>&lt;/pre>
+&lt;p>&lt;strong>Exemple 2: En déclarant un nom de varialbe pour la clé et la valeur&lt;/strong>&lt;/p>
+&lt;pre>&lt;code>{{range $index, $element := array}}
+{{ $index }}
+{{ $element }}
+{{ end }}
+&lt;/code>&lt;/pre>
+&lt;h3 id="conditions">Conditions&lt;/h3>
+&lt;p>&lt;em>If&lt;/em>, &lt;em>else&lt;/em>, &lt;em>with&lt;/em>, &lt;em>or&lt;/em>, &lt;em>&amp;amp;&lt;/em>, &lt;em>and&lt;/em> fournissent la base pour la logique
+conditionnelle avec Go templates. Comme &lt;em>range&lt;/em>, chaque déclaration est fermé
+avec &lt;code>end&lt;/code>.&lt;/p>
+&lt;p>Go templates considère les valeurs suivante comme &lt;em>false&lt;/em> :&lt;/p>
+&lt;ul>
+&lt;li>false&lt;/li>
+&lt;li>0&lt;/li>
+&lt;li>tout array, slice, map ou chaine d&amp;rsquo;une longueur de zéro&lt;/li>
+&lt;/ul>
+&lt;p>&lt;strong>Exemple 1: If&lt;/strong>&lt;/p>
+&lt;pre>&lt;code>{{ if isset .Params &amp;quot;title&amp;quot; }}&amp;lt;h4&amp;gt;{{ index .Params &amp;quot;title&amp;quot; }}&amp;lt;/h4&amp;gt;{{ end }}
+&lt;/code>&lt;/pre>
+&lt;p>&lt;strong>Exemple 2: If -&amp;gt; Else&lt;/strong>&lt;/p>
+&lt;pre>&lt;code>{{ if isset .Params &amp;quot;alt&amp;quot; }}
+{{ index .Params &amp;quot;alt&amp;quot; }}
+{{else}}
+{{ index .Params &amp;quot;caption&amp;quot; }}
+{{ end }}
+&lt;/code>&lt;/pre>
+&lt;p>&lt;strong>Exemple 3: And &amp;amp; Or&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">{{ if and (or (isset .Params &amp;#34;title&amp;#34;) (isset .Params &amp;#34;caption&amp;#34;))
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> (isset .Params &amp;#34;attr&amp;#34;)}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>&lt;strong>Exemple 4: With&lt;/strong>&lt;/p>
+&lt;p>Une manière alternative d&amp;rsquo;écrire un &amp;ldquo;if&amp;rdquo; et de référencer cette même valeur est
+d&amp;rsquo;utiliser &amp;ldquo;with&amp;rdquo;. Cela permet de remplacer le contexte &lt;code>.&lt;/code> par cet valeur et
+saute le bloc si la variable est absente.&lt;/p>
+&lt;p>Le premier exemple peut être simplifié à ceci :&lt;/p>
+&lt;pre>&lt;code>{{ with .Params.title }}&amp;lt;h4&amp;gt;{{ . }}&amp;lt;/h4&amp;gt;{{ end }}
+&lt;/code>&lt;/pre>
+&lt;p>&lt;strong>Exemple 5: If -&amp;gt; Else If&lt;/strong>&lt;/p>
+&lt;pre>&lt;code>{{ if isset .Params &amp;quot;alt&amp;quot; }}
+{{ index .Params &amp;quot;alt&amp;quot; }}
+{{ else if isset .Params &amp;quot;caption&amp;quot; }}
+{{ index .Params &amp;quot;caption&amp;quot; }}
+{{ end }}
+&lt;/code>&lt;/pre>
+&lt;h2 id="pipes">&lt;em>Pipes&lt;/em>&lt;/h2>
+&lt;p>L&amp;rsquo;un des composants le plus puissant de Go templates est la capacité d&amp;rsquo;empiler
+les action l&amp;rsquo;une après l&amp;rsquo;autre. Cela est fait en utilisant les &lt;em>pipes&lt;/em>.
+Empruntés aux &lt;em>pipes&lt;/em> unix, le concept est simple. Chaque sortie de &lt;em>pipeline&lt;/em>
+devient l&amp;rsquo;entrée du &lt;em>pipe&lt;/em> suivant.&lt;/p>
+&lt;p>À cause de la syntaxe très simple de Go templates, le &lt;em>pipe&lt;/em> est essentiel pour
+être capable d&amp;rsquo;enchainer les appels de fonctions. Une limitation des &lt;em>pipes&lt;/em>
+est qu&amp;rsquo;il ne peuvent fonctionner seulement avec une seule valeur et cette valeur
+devient le dernier paramètre du prochain &lt;em>pipeline&lt;/em>.&lt;/p>
+&lt;p>Quelques exemples simple devrait vous aider à comprendre comment utiliser les
+&lt;em>pipes&lt;/em>.&lt;/p>
+&lt;p>&lt;strong>Exemple 1 :&lt;/strong>&lt;/p>
+&lt;pre>&lt;code>{{ if eq 1 1 }} Same {{ end }}
+&lt;/code>&lt;/pre>
+&lt;p>est identique à&lt;/p>
+&lt;pre>&lt;code>{{ eq 1 1 | if }} Same {{ end }}
+&lt;/code>&lt;/pre>
+&lt;p>Il semble étrange de placer le &lt;em>if&lt;/em> à la fin, mais il fournit une bonne
+illustration de la façon d&amp;rsquo;utiliser les tuyaux.&lt;/p>
+&lt;p>&lt;strong>Exemple 2 :&lt;/strong>&lt;/p>
+&lt;pre>&lt;code>{{ index .Params &amp;quot;disqus_url&amp;quot; | html }}
+&lt;/code>&lt;/pre>
+&lt;p>Accès au paramètre de page nommé &amp;ldquo;disqus_url&amp;rdquo; et échappement du HTML&lt;/p>
+&lt;p>&lt;strong>Exemple 3 :&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">{{ if or (or (isset .Params &amp;#34;title&amp;#34;) (isset .Params &amp;#34;caption&amp;#34;))
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> (isset .Params &amp;#34;attr&amp;#34;)}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Stuff Here
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{ end }}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Peut être réécrit en&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">{{ isset .Params &amp;#34;caption&amp;#34; | or isset .Params &amp;#34;title&amp;#34; |
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> or isset .Params &amp;#34;attr&amp;#34; | if }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">Stuff Here
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{ end }}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;h2 id="contexte-alias-le-point">Contexte (alias. le point)&lt;/h2>
+&lt;p>Le concept le plus facilement négligé pour comprendre les modèles go est que
+{{ . }} fait toujours référence au contexte actuel. Dans le plus haut niveau de
+votre modèle, ce sera l&amp;rsquo;ensemble des données mis à votre disposition. Dans une
+itération, ce sera la valeur de l&amp;rsquo;élément actuel. Enfin, dans une boucle, le
+contexte change. . ne fera plus référence aux données disponibles dans la page
+entière. Si vous avez besoin y d&amp;rsquo;accèder depuis l&amp;rsquo;intérieur d&amp;rsquo;une boucle, il est
+judicieux d&amp;rsquo;y définir comme variable au lieu de dépendre du contexte.&lt;/p>
+&lt;p>&lt;strong>Exemple:&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">{{ $title := .Site.Title }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{ range .Params.tags }}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;li&amp;gt; &amp;lt;a href=&amp;#34;{{ $baseurl }}/tags/{{ . | urlize }}&amp;#34;&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{ . }}&amp;lt;/a&amp;gt; - {{ $title }} &amp;lt;/li&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{ end }}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Notez que, une fois que nous sommes entrés dans la boucle, la valeur de
+{{ . }} a changée. Nous avons défini une variable en dehors de la boucle, afin
+d&amp;rsquo;y avoir accès dans la boucle.&lt;/p>
+&lt;h1 id="les-paramètres-dhugo">Les Paramètres d&amp;rsquo;Hugo&lt;/h1>
+&lt;p>Hugo fournit l&amp;rsquo;option de passer des valeurs au modèle depuis la configuration du
+site, ou depuis les métadonnées de chaque partie du contenu. Vous pouvez définir
+n&amp;rsquo;importe quelle valeur de n&amp;rsquo;importe quel type (supporté par votre section
+liminaire / format de configuration) et les utiliser comme vous le souhaitez
+dans votre modèle.&lt;/p>
+&lt;h2 id="utiliser-les-paramètres-de-contenu-page">Utiliser les paramètres de contenu (page)&lt;/h2>
+&lt;p>Dans chaque partie du contenu, vous pouvez fournir des variables pour être
+utilisées par le modèle. Cela se passe dans la
+&lt;a class="link" href="https://example.com/content/front-matter" >section liminaire&lt;/a>.&lt;/p>
+&lt;p>Un exemple de cela est utilisé par ce site de documentation. La plupart des
+pages bénéficient de la présentation de la table des matières. Quelques fois,
+la table des matières n&amp;rsquo;a pas beaucoup de sens. Nous avons défini une variable
+dans notre section liminaire de quelques pages pour désactiver la table des
+matières.&lt;/p>
+&lt;p>Ceci est un exemple de section liminaire :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;span class="lnt">7
+&lt;/span>&lt;span class="lnt">8
+&lt;/span>&lt;span class="lnt">9
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">---
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">title: &amp;#34;Permalinks&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">date: &amp;#34;2013-11-18&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">aliases:
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> - &amp;#34;/doc/permalinks/&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">groups: [&amp;#34;extras&amp;#34;]
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">groups_weight: 30
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">notoc: true
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">---
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Ceci est le code correspondant dans le modèle :&lt;/p>
+&lt;pre>&lt;code> {{ if not .Params.notoc }}
+&amp;lt;div id=&amp;quot;toc&amp;quot; class=&amp;quot;well col-md-4 col-sm-6&amp;quot;&amp;gt;
+{{ .TableOfContents }}
+&amp;lt;/div&amp;gt;
+{{ end }}
+&lt;/code>&lt;/pre>
+&lt;h2 id="utiliser-les-paramètres-de-site-config">Utiliser les paramètres de site (config)&lt;/h2>
+&lt;p>Dans votre configuration de plus haut niveau (ex &lt;code>config.yaml&lt;/code>), vous pouvez
+définir des paramètres de site, dont les valeurs vous seront accessibles.&lt;/p>
+&lt;p>Pour les instances, vous pourriez délarer :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-yaml" data-lang="yaml">&lt;span class="line">&lt;span class="cl">&lt;span class="nt">params&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">CopyrightHTML&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;Copyright &amp;amp;#xA9; 2013 John Doe. All Rights Reserved.&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">TwitterUser&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="s2">&amp;#34;spf13&amp;#34;&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="w"> &lt;/span>&lt;span class="nt">SidebarRecentLimit&lt;/span>&lt;span class="p">:&lt;/span>&lt;span class="w"> &lt;/span>&lt;span class="m">5&lt;/span>&lt;span class="w">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Avec un pied de page, vous devriez déclarer un &lt;code>&amp;lt;footer&amp;gt;&lt;/code> qui est affiché
+seulement si le paramètre &lt;code>CopyrightHTML&lt;/code> est déclaré, et si il l&amp;rsquo;est, vous
+devriez le déclarer comme HTML-safe, afin d&amp;rsquo;éviter d&amp;rsquo;échapper les entités HTML.
+Cela vous permettra de le modifier facilement dans votre configuration au lieu
+de le chercher dans votre modèle.&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">{{if .Site.Params.CopyrightHTML}}&amp;lt;footer&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;div class=&amp;#34;text-center&amp;#34;&amp;gt;{{.Site.Params.CopyrightHTML | safeHtml}}&amp;lt;/div&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/footer&amp;gt;{{end}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Une alternative au &amp;ldquo;if&amp;rdquo; et d&amp;rsquo;appeler la même valeur est d&amp;rsquo;utiliser &amp;ldquo;with&amp;rdquo;. Cela
+modifiera le contexte et passera le bloc si la variable est absente :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">{{with .Site.Params.TwitterUser}}&amp;lt;span class=&amp;#34;twitter&amp;#34;&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;a href=&amp;#34;https://twitter.com/{{.}}&amp;#34; rel=&amp;#34;author&amp;#34;&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;img src=&amp;#34;/images/twitter.png&amp;#34; width=&amp;#34;48&amp;#34; height=&amp;#34;48&amp;#34; title=&amp;#34;Twitter: {{.}}&amp;#34;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> alt=&amp;#34;Twitter&amp;#34;&amp;gt;&amp;lt;/a&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/span&amp;gt;{{end}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div>&lt;p>Enfin, si vous souhaitez extraire des &amp;ldquo;constantes magiques&amp;rdquo; de vos mises en
+page, vous pouvez le faire comme dans l&amp;rsquo;exemple suivant :&lt;/p>
+&lt;div class="highlight">&lt;div class="chroma">
+&lt;table class="lntable">&lt;tr>&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code>&lt;span class="lnt">1
+&lt;/span>&lt;span class="lnt">2
+&lt;/span>&lt;span class="lnt">3
+&lt;/span>&lt;span class="lnt">4
+&lt;/span>&lt;span class="lnt">5
+&lt;/span>&lt;span class="lnt">6
+&lt;/span>&lt;/code>&lt;/pre>&lt;/td>
+&lt;td class="lntd">
+&lt;pre tabindex="0" class="chroma">&lt;code class="language-fallback" data-lang="fallback">&lt;span class="line">&lt;span class="cl">&amp;lt;nav class=&amp;#34;recent&amp;#34;&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;h1&amp;gt;Recent Posts&amp;lt;/h1&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;ul&amp;gt;{{range first .Site.Params.SidebarRecentLimit .Site.Recent}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &amp;lt;li&amp;gt;&amp;lt;a href=&amp;#34;{{.RelPermalink}}&amp;#34;&amp;gt;{{.Title}}&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> {{end}}&amp;lt;/ul&amp;gt;
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&amp;lt;/nav&amp;gt;
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/td>&lt;/tr>&lt;/table>
+&lt;/div>
+&lt;/div></description></item></channel></rss>

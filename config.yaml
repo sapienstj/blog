@@ -1,8 +1,7 @@
-baseurl: https://example.com
-languageCode: pt-br
+baseurl: https://sapienstj.netlify.app
 theme: hugo-theme-stack
 paginate: 5
-title: Example Site
+title: Sapiens - Blog
 
 languages:
     pt-br:
