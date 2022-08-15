@@ -4,4 +4,4 @@
 
 [build.environment]
   HUGO_VERSION = "lastest"
-  extended: true
+  extended = true
