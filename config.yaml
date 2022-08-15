@@ -32,7 +32,7 @@ params:
         - post
     featuredImageField: image
     rssFullContent: true
-    favicon:
+    favicon: img/avatar.png
 
     footer:
         since: 1993
@@ -144,10 +144,6 @@ params:
             - type: categories
               params:
                   limit: 10
-            - type: tag-cloud
-              params:
-                  limit: 10
-        page:
             - type: toc
 
     opengraph:
@@ -201,7 +197,7 @@ related:
     threshold: 60
     toLower: false
     indices:
-        - name: categories
+        - name: Categorias
           weight: 200
 
 markup:

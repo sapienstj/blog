@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://sapienstj.netlify.app/</loc>
+    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sapienstj.netlify.app/page/</loc>
+    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sapienstj.netlify.app/sobre/</loc>
+    <lastmod>2022-08-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sapienstj.netlify.app/arquivo/</loc>
+    <lastmod>2019-05-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sapienstj.netlify.app/pesquisa/</loc>
+  </url><url>
+    <loc>https://sapienstj.netlify.app/categories/</loc>
+  </url><url>
+    <loc>https://sapienstj.netlify.app/links/</loc>
+  </url><url>
+    <loc>https://sapienstj.netlify.app/categories/podcast/</loc>
+  </url><url>
+    <loc>https://sapienstj.netlify.app/categories/postagem/</loc>
+  </url><url>
+    <loc>https://sapienstj.netlify.app/post/</loc>
+  </url><url>
+    <loc>https://sapienstj.netlify.app/tags/</loc>
+  </url><url>
+    <loc>https://sapienstj.netlify.app/p/teste/</loc>
+  </url><url>
+    <loc>https://sapienstj.netlify.app/categories/tutoriais/</loc>
+  </url>
+</urlset>

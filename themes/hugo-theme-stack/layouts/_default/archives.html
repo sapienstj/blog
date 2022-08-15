@@ -1,7 +1,7 @@
 {{ define "body-class" }}template-archives{{ end }}
 {{ define "main" }}
     <header>
-        {{- $taxonomy := $.Site.GetPage "taxonomyTerm" "categories" -}}
+        {{- $taxonomy := $.Site.GetPage "taxonomyTerm" "categorias" -}}
         {{- $terms := $taxonomy.Pages -}}
         {{ if $terms }}
         <h2 class="section-title">{{ $taxonomy.Title }}</h2>
