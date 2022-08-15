@@ -7,13 +7,12 @@ public_folder: /images/
 collections:
   - label: "Posts"
     name: "post"
-    folder: "content/post/{{slug}}"
+    folder: "content/post"
     create: true
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "URL", name: "slug", widget: "string"}
+      - {label: "Autor", name: "tags", widget: "select", multiple: false, options: ["Equipe Sapiens", "Matheus Gonçalves", "Matheus Oliveira"], allow_add: true,  default: ["Equipe Sapiens"]}
       - {label: "Descrição", name: "description", widget: "string"}
       - {label: "Imagem", name: "image", widget: "image"}
-      - {label: "Tags", name: "tags", widget: "select", multiple: true, options: ["Design", "UX", "Dev"], allow_add: false}
-      - {label: "Categorias", name: "categories", multiple: true, options: ["Design", "UX", "Dev"]}               
+      - {label: "Categoria", name: "categories", widget: "select", multiple: false, options: ["Postagem", "Podcast", "Tutorial"], allow_add: false,  default: ["Postagem"]}              
       - {label: "Conteúdo", name: "body", widget: "markdown"}
