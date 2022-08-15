@@ -13,7 +13,7 @@ collections:
       - {label: "Data", name: "date", widget: "date"}    
       - {label: "Título", name: "title", widget: "string"}
       - {label: "Descrição", name: "description", widget: "string"}
-      - {label: "Categoria", name: "tags", widget: "select", options: ["Postagem", "Podcast", "Tutorial"]}
+      - {label: "Categoria", name: "categories", widget: "select", options: ["Postagem", "Podcast", "Tutorial"]}
       - {label: "Imagem", name: "image", widget: "image"}         
       - {label: "Conteúdo", name: "body", widget: "markdown"}
       
