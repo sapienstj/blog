@@ -15,4 +15,4 @@ collections:
       - {label: "Imagem", name: "image", widget: "image"}
       - {label: "Categoria", name: "categories", widget: "select", multiple: false, options: ["Postagem", "Podcast", "Tutorial"], allow_add: false,  default: ["Postagem"]}              
       - {label: "Conteúdo", name: "body", widget: "markdown"}
-      - { label: "Autor", name: "tags", widget: "list", summary: "{{fields.tag}}", field: { label: "Tag", name: "tag", widget: "string" }}
+      - { label: "Autor", name: "tags", widget: "string", default: ["Equipe Sapiens"]}
