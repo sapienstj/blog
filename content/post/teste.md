@@ -1,5 +1,5 @@
 ---
-date: 2022-08-15T23:15:32.021Z
+date: 2022-09-19T23:15:32.021Z
 title: Por que diabos um Blog?
 description: Não, a gente não tá preso no passado!
 categories: Postagem
