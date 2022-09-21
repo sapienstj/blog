@@ -1,7 +1,7 @@
 ---
 date: 2022-09-21T19:14:41.688Z
 title: "Mês da Prevenção ao Suicídio "
-description: Um post sobre o Setembro amarelo com o que REALMENTE precisa ser dito.
+description: O que REALMENTE precisa ser dito sobre o Setembro Amarelo
 categories: Postagem
 image: /images/dia-do-suicídio.jpg
 ---
