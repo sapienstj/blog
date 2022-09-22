@@ -4,6 +4,7 @@ backend:
 publish_mode: editorial_workflow
 media_folder: static/images/
 public_folder: /images/
+locale: 'pt-br'
 collections:
   - label: "Posts"
     name: "post"
