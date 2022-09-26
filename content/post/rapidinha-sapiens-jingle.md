@@ -5,13 +5,11 @@ description: Sabe aquela musica viciante em uma propaganda? Ela é um Jingle!
 categories: Postagem
 image: /images/varig.jpg
 ---
-Sabe aquela música que você escuta em algum comercial e que provavelmente ela ficará na sua cabeça em *Looping*? Então… Ela é um Jingle!
-
-O trabalho dela é exatamente esse, contextualizar e concentrar o telespectador a propaganda em si, aproximando o público ao cliente, criando uma boa (e necessária) afinidade.
+Sabe aquela música que você escuta em algum comercial e que provavelmente ela ficará na sua cabeça em *Looping*? Então… Ela é um Jingle! O trabalho dela é exatamente esse, contextualizar e concentrar o telespectador a propaganda em si, aproximando o público ao cliente, criando uma boa (e necessária) afinidade.
 
 Claro… Estamos em um espaço de conhecimento então é importante sabermos o seu objetivo final, vamos ali no Google ver seu significado literal.
 
-Segundo o Google:
+Segundo o **Google**:
 
 *“Jingle é um termo da língua inglesa que se refere a uma mensagem musical publicitária e elaborada com um refrão simples e de curta duração, a fim de ser lembrado com facilidade.”*
 
