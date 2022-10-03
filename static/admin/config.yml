@@ -6,7 +6,7 @@ media_folder: static/images/
 public_folder: /images/
 locale: 'pt'
 collections:
-  - label: "Posts"
+  - label: "posts"
     name: "post"
     folder: "content/post"
     create: true
