@@ -5,7 +5,7 @@ publish_mode: editorial_workflow
 media_folder: static/images/
 public_folder: /images/
 collections:
-  - label: "Posts"
+  - label: "Post"
     name: "post"
     folder: "content/post"
     create: true
@@ -13,7 +13,7 @@ collections:
       - {label: "Data", name: "date", widget: "date"}    
       - {label: "Título", name: "title", widget: "string"}
       - {label: "Descrição", name: "description", widget: "string"}
-      - {label: "Categoria", name: "categories", widget: "select", options: ["Postagem", "Podcast", "Tutorial"]}
+      - {label: "Categoria", name: "categories", widget: "string"}
       - {label: "Imagem", name: "image", widget: "image"}         
       - {label: "Conteúdo", name: "body", widget: "markdown"}
       
