@@ -32,7 +32,7 @@ params:
         - post
     featuredImageField: image
     rssFullContent: true
-    favicon: img/avatar.png
+    favicon: img/icon.svg
 
     footer:
         since: 1993
@@ -43,7 +43,7 @@ params:
         lastUpdated: 02 Jan, 2006 15:04
 
     sidebar:
-        emoji: 🌻
+        emoji: 
         subtitle: Agência Experimental de Publicidade e Propaganda.
         avatar:
             enabled: true
@@ -179,12 +179,12 @@ params:
 menu:
     main: []
 
-    social:
-        - identifier: Instagram
-          name: Instagram
-          url: https://instagram.com/sapienstj
-          params:
-              icon: brand-instagram
+#    social:
+#        - identifier: Instagram
+#          name: Instagram
+#          url: https://instagram.com/sapienstj
+#          params:
+#              icon: brand-instagram
 
 related:
     includeNewer: true
@@ -211,3 +211,5 @@ markup:
         lineNos: true
         lineNumbersInTable: true
         tabWidth: 4
+
+DefaultContentLanguage: pt-br

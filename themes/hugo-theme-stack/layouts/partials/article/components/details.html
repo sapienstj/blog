@@ -41,7 +41,10 @@
                     {{ T "article.readingTime" .ReadingTime }}
                 </time>
             </div>
-        {{ end }}
+        {{ end }}   
+            {{ partial "helper/icon" "user" }}
+            <time>{{ .Params.Author }}</time>
+       </body>
     </footer>
     {{ end }}
 

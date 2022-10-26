@@ -8,7 +8,7 @@ params:
         - post
     featuredImageField: image
     rssFullContent: true
-    favicon:
+    favicon: img/icon.svg
 
     footer:
         since:
@@ -141,3 +141,4 @@ params:
             enabled: true
         content:
             enabled: true
+    DefaultContentLanguage: pt-br

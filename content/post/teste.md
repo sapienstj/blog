@@ -4,6 +4,7 @@ title: Por que diabos um Blog?
 description: Não, a gente não tá preso no passado!
 categories: Postagem
 image: /images/capa-1.jpg
+author: Matheus Oliveira
 ---
 Em uma época de tanto imediatismo, a gente mostra que comunicar é fazer diferente. Por isso, decidimos inovar, fazendo uma comunicação com gostinho de nostalgia, incluindo mais um meio de comunicação pro portfólio Sapiens: o blog da Sapiens™.
 

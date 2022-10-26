@@ -4,6 +4,6 @@ description: "As notícias, artigos e outras coisas do tipo ficam aqui!"
 slug: "Posts"
 image: "postagem.jpg"
 style:
-    background: "#2a9d8f"
+    background: "#4187ED"
     color: "#fff"
 ---
