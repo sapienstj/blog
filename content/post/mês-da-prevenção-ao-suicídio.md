@@ -1,10 +1,10 @@
 ---
 date: 2022-09-21T19:14:41.688Z
 title: "Mês da Prevenção ao Suicídio "
-description: O que REALMENTE precisa ser dito sobre o Setembro Amarelo
-categories: Postagem
-image: /images/dia-do-suicídio.jpg
 author: Alice Arievilo
+description: O que REALMENTE precisa ser dito sobre o Setembro Amarelo
+categories: Especiais
+image: /images/dia-do-suicídio.jpg
 ---
 Muito se fala. Muito se lê. Afinal, o que fazer quando temos tendências suicidas? Quando alguém próximo demonstra sinais de comportamento autodestrutivo?
 
