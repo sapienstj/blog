@@ -1,10 +1,10 @@
 ---
 date: 2022-09-26T19:19:36.679Z
 title: "Rapidinha Sapiens: Jingle"
-description: Sabe aquela musica viciante em uma propaganda? Ela é um Jingle!
-categories: Postagem
-image: /images/varig.jpg
 author: Matheus Gonçalves
+description: Sabe aquela musica viciante em uma propaganda? Ela é um Jingle!
+categories: Rapidinha
+image: /images/varig.jpg
 ---
 Sabe aquela música que você escuta em algum comercial e que provavelmente ela ficará na sua cabeça em *Looping*? Então… Ela é um Jingle! O trabalho dela é exatamente esse, contextualizar e concentrar o telespectador a propaganda em si, aproximando o público ao cliente, criando uma boa (e necessária) afinidade.
 
