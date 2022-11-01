@@ -6,6 +6,7 @@ aliases:
 slug: sobre
 license: CC BY-NC-ND
 lastmod: '2022-08-15'
+author: Equipe Sapiens
 menu:
     main: 
         weight: -90
@@ -13,6 +14,8 @@ menu:
             icon: user
 ---
 
-Somos uma metagência de publicidade experimental ligada a faculdade Estácio no Campus Tom Jobim, com o objetivo de colocar em prática tudo que aprendemos dentro da sala de aula! Aqui procuramos ser criativos, inclusivos e plurais. 
+A Sapiens é a Agência Experimental de Publicidade e Propaganda do campus Tom Jobim em sua composição atual, formada por alunos voluntários que englobam os cursos da economia criativa. 
 
-Um espaço de ideias em constante evolução para que tenhamos não só publicitários mas sim mestres na arte de comunicar 😎
+A Sapiens existe como uma Casa de Comunicação: plataforma de desenvolvimento e coworking que visa o amadurecimento das habilidades profissionais dos alunos de comunicação antes do seu ingresso no mercado de trabalho.
+
+O nome Sapiens simboliza nossa maior verdade: estamos em constante evolução. Na prática, isso quer dizer que, na Sapiens, não nos contentamos com os marcos que já alcançamos e sempre buscamos jeitos novos de realizar nossos trabalhos com criatividade e excelência. 😎
