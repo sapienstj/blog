@@ -3,7 +3,7 @@ date: 2022-11-17T14:42:07.666Z
 title: Traduções e Videogames
 author: Matheus Oliveira
 description: Como se diz “saudade” em megabytes?
-categories: Teste
+categories: Postagens
 image: /images/tradução-e-videogames.jpg
 ---
 A série de livros britânica de Harry Potter é uma das mais amadas e transformadoras de todos os tempos, mas antes de alcançar seu sucesso global, os livros, originalmente escritos em inglês, precisaram ser traduzidos e adaptados para diversas línguas.
