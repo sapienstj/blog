@@ -1,12 +1,12 @@
 baseurl: https://sapienstj.netlify.app
 theme: hugo-theme-stack
-paginate: 5
-title: Sapiens - Blog
+paginate: 8
+title: Blog da Sapiens
 
 languages:
     pt-br:
         languageName: Português
-        title: Agência Sapiens
+        title: Blog da Sapiens
         weight: 1
 
 # Change it to your Disqus shortname before using
