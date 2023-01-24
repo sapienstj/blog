@@ -24,12 +24,16 @@ Você leu cantando? Pois é, o redator desse texto também! Esse é um dos jingl
 
 No vídeo, uma das primeiras aparições de ''Varig, Varig, Varig'' ainda não cantado, somente em imagem. Tal exibição já foi o suficiente para entrar na memoria de quem estava vendo. 
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/3mWCNGMWR1s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+{{< youtube 3mWCNGMWR1s >}}
 
 A sua veiculação foi constante, principalmente em propagandas que a Varig fazia para suas rotas internacionais ou peças de fim de ano. O Jingle foi se atualizando ao longo dos anos, porém nunca perdeu sua essência, se transformando em um verdadeiro clássico.
 
 No vídeo, a última veiculação de uma propaganda da Varig com o famoso Jingle, perceba que ele recebeu atualizações, comparado as primeiras versões.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/jXCbAOqiNG8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+{{< youtube jXCbAOqiNG8 >}}
 
 Apesar de ter encerrado as operações no meio de 2007, o Jingle da Varig se mantém vivo até hoje, servindo de exemplo e aprendizado para novos publicitários que estão vindo.
