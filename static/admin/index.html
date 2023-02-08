@@ -4,11 +4,36 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <title>Gerenciador de Conteúdos</title>
+  <title>XGerenciador de Conteúdos</title>
 </head>
 <body>
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-  <script src="https://sapienstjwiki.netlify.app/hugo_shortcodes_netlify_cms.js"></script>
+  <script 
+  CMS.registerEditorComponent({
+    id: "youtube",
+    label: "Youtube",
+    fields: [{
+        name: "id",
+        label: "Youtube Video ID",
+        widget: "string"
+    }],
+    pattern: /{{< youtube\s+(?<id>[A-Za-z0-9\-]+)\s+>}}/,
+    fromBlock: function(match) {
+        return {
+            id: match[1],
+        };
+    },
+    toBlock: function(obj) {
+        if (obj.id.includes('https://youtu.be/')) {
+            obj.id = obj.id.replace('https://youtu.be/', '');
+        }
+        return `{{< youtube ${obj.id.trim()} >}}`;
+    },
+    toPreview: function(obj) {
+        return `<img src="https://i3.ytimg.com/vi/${obj.id}/hqdefault.jpg" alt="Youtube Video"/>`;
+    },
+});
+</script>
 </body>
 </html>
