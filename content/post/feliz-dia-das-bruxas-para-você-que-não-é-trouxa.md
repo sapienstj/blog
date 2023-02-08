@@ -18,6 +18,8 @@ Um exemplo é a marca de Refri Fanta que aproveitou para lançar novos sabores, 
 
 O Burguer King com um comercial inspirado no filme Atividade Paranormal, anunciando ofertas que apareceriam somente 3h da manhã. E detalhes!! O comercial foi lançado 11 meses atrás e só recentemente que começou a de fato ser indicado para as pessoas.
 
+
+
 {{< youtube b4843hUvN-0 >}}
 
 Agora que você já sacou da história do Hallowen e viu algumas referências de propaganda, que tal aprender um pouco sobre os icônicos dessa festividade. Quem sabe após ler você já não será um mestre de criatividade sobre o Halloween!?
