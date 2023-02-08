@@ -3,6 +3,6 @@
 {{- if in $url $youtubeHost }}
   {{- $url = strings.TrimPrefix $youtubeHost $url }}
 {{- end }}
-<div {{ with $class }}class="{{ . }}"{{ else }}style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;"{{ end }}">
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
   <iframe src="https://www.youtube.com/embed/{{ $url }}?controls=1&rel=0" loading="lazy"></iframe>
 </div>
