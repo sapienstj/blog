@@ -14,10 +14,9 @@ A palavra Halloween vem do inglês All Hallows Eve, significando a véspera de t
 
 Um exemplo é a marca de Refri Fanta que aproveitou para lançar novos sabores, com um comercial curto e utilizando famosos personagens do horror:
 
-{{< youtube JJLKFDWr7tc >}}
+{{< youtube "https://youtu.be/JJLKFDWr7tc" >}}
 
 O Burguer King com um comercial inspirado no filme Atividade Paranormal, anunciando ofertas que apareceriam somente 3h da manhã. E detalhes!! O comercial foi lançado 11 meses atrás e só recentemente que começou a de fato ser indicado para as pessoas.
-
 
 {{< youtube b4843hUvN-0 >}}
 
