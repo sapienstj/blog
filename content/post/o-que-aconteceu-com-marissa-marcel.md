@@ -8,7 +8,7 @@ image: /images/marissa-marcel.webp
 ---
 Novas pistas sobre o desaparecimento da atriz Marissa Marcel surgem na internet. A atriz, desaparecida desde **1999**, prometia ter seu nome ao lado dos maiores astros do cinema global.
 
-![](/images/marissa-entrevista.webp)
+![](/images/marissa-interview.webp)
 
 De origem francesa, Marissa Marcel se mudou para Londres antes dos seus 18 anos buscando seu sonho de trabalhar como modelo. Seu imenso carisma em seu primeiro comercial, porém, garantiu à ela uma personagem em [Ambrosio](https://www.imdb.com/title/tt15173592/), adaptação do romance gótico [The Monk de M. G. Lewis](https://www.amazon.com.br/Monk-Matthew-Lewis/dp/0198704453) sob a ótica do renomado diretor americano **Arthur Fischer**.
 
