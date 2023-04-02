@@ -1,6 +1,6 @@
 ---
 date: 2023-04-02T20:43:35.299Z
-title: O que aconteceu com Marissa Marcel?
+title: Caso Marissa Marcel
 author: Matheus Oliveira
 description: Surgem novas pistas sobre o desaparecimento da atriz
 categories: Outros
